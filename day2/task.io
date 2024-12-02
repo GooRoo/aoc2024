@@ -61,20 +61,15 @@ readReports := method(fileName, withProblemDampener,
 				firstFalse := safe indexOf(false)
 				" - first false at #{firstFalse}" interpolate println
 
-				stepBack := if(firstFalse > 0,
-					dropAndRecheck(report, firstFalse - 1)
-				,
-					false
-				)
-
+				stepBack := if(firstFalse > 0, dropAndRecheck(report, firstFalse - 1), false)
 				maybeNow1 := dropAndRecheck(report, firstFalse)
-
 				maybeNow2 := dropAndRecheck(report, firstFalse + 1)
 
-				"Overall result: #{(maybeNow1) or (maybeNow2)}" interpolate println
+				"Overall result: #{stepBack or maybeNow1 or maybeNow2}" interpolate println
 
 				if (stepBack or maybeNow1 or maybeNow2, acc + 1, acc)
 			,
+				" - not good" println
 				acc
 			)
 		)
