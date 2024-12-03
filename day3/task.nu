@@ -1,8 +1,6 @@
 use std log
 
-export def solve-one [
-	fileName: string
-] {
+export def solve-one [fileName: string] [nothing -> int] {
 	log info $"Reading from ($fileName)"
 
 	let result = (open $fileName
@@ -16,9 +14,7 @@ export def solve-one [
 	$result
 }
 
-export def solve-two [
-	fileName: string
-] {
+export def solve-two [fileName: string] [nothing -> int] {
 	log info $"Reading from ($fileName)"
 
 	let result = (open $fileName
