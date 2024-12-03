@@ -4,7 +4,7 @@ export def solve-one [fileName: string] [nothing -> int] {
 	log info $"Reading from ($fileName)"
 
 	let result = (open $fileName
-		| parse --regex '(mul\((?P<a>\d+),(?P<b>\d+)\))'
+		| parse --regex '(mul\((?P<a>\d{1,3}),(?P<b>\d{1,3})\))'
 		| into int a b
 		| upsert c {|it| $it.a * $it.b}
 		| math sum
@@ -18,7 +18,7 @@ export def solve-two [fileName: string] [nothing -> int] {
 	log info $"Reading from ($fileName)"
 
 	let result = (open $fileName
-		| parse --regex r#'(?P<op>don't\(\)|do\(\)|mul\((?P<a>\d+),(?P<b>\d+)\))'#
+		| parse --regex r#'(?P<op>don't\(\)|do\(\)|mul\((?P<a>\d{1,3}),(?P<b>\d{1,3})\))'#
 		| reduce --fold {do: true result: 0} {|it, acc|
 			if $it.op == 'do()' {
 				{do: true result: $acc.result}
