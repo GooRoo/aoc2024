@@ -11,3 +11,6 @@ trim_trailing_whitespace = true
 [*.hs]
 indent_size = 2
 indent_style = space
+
+[*.py]
+indent_style = space
