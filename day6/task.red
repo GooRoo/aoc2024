@@ -126,7 +126,7 @@ advance: func [
         ]
     ]
 
-    print "This should never have happened"
+    print "This should have never happened"
     quit
 ]
 
