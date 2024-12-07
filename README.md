@@ -8,3 +8,4 @@
 | 4   | [Swift](https://www.swift.org/)     |
 | 5   | [Python](https://www.python.org/)   |
 | 6   | [Red](https://www.red-lang.org/)    |
+| 6   | [C++](https://isocpp.org/)          |
