@@ -9,3 +9,4 @@
 | 5   | [Python](https://www.python.org/)   |
 | 6   | [Red](https://www.red-lang.org/)    |
 | 7   | [C++](https://isocpp.org/)          |
+| 8   | [Nim](https://nim-lang.org/)        |
