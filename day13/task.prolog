@@ -1,4 +1,5 @@
 :- use_module(library(clpfd)).
+:- initialization(main).
 
 read_input(Filename, Machines) :-
     open(Filename, read, Stream),
@@ -108,5 +109,3 @@ main :-
 	solve_first("data/task.data", Tokens1),
 	solve_second("data/task.data", Tokens2),
 	format('Results:~n    first: ~w~n    second: ~w~n', [Tokens1, Tokens2]).
-
-% :- initialization(main).
