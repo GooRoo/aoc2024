@@ -16,23 +16,19 @@ defmodule Day11 do
   def solve_like_noob(iterations) do
     data = read_data(@file_path)
 
-    result =
-      Enum.reduce(1..iterations, data, fn _, acc -> acc |> Enum.flat_map(&replace_naïve/1) end)
-
-    length(result)
+    1..iterations
+    |> Enum.reduce(data, fn _, acc -> acc |> Enum.flat_map(&replace_naïve/1) end)
+    |> length()
   end
 
   def solve_like_master_tought_me(iterations) do
     data = read_data(@file_path)
 
     init =
-      Enum.reduce(data, %{}, fn val, acc ->
-        acc |> Map.put(val, 1)
-      end)
+      data |> Enum.reduce(%{}, fn val, acc -> acc |> Map.put(val, 1) end)
 
-    Enum.reduce(1..iterations, init, fn _, acc ->
-      Enum.reduce(acc, %{}, &replace_len/2)
-    end)
+    1..iterations
+    |> Enum.reduce(init, fn _, acc -> acc |> Enum.reduce(%{}, &replace_len/2) end)
     |> Enum.reduce(0, fn {_, v}, acc -> acc + v end)
   end
 
@@ -45,7 +41,7 @@ defmodule Day11 do
   end
 
   def split_number(number) when is_integer(number) do
-    half_len = div(digits_len(number), 2)
+    half_len = number |> digits_len() |> div(2)
     divider = 10 ** half_len
     {div(number, divider), rem(number, divider)}
   end
