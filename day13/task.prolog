@@ -55,8 +55,8 @@ check_possible(Solver, Ax, Ay, Bx, By, Px, Py) :-
     ).
 
 solve_machine(Ax, Ay, Bx, By, Px, Py, A, B) :-
-    A in 0..10000,
-    B in 0..10000,
+    A in 0..100,
+    B in 0..100,
 
     A * Ax + B * Bx #= Px,
     A * Ay + B * By #= Py,
