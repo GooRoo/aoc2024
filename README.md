@@ -13,3 +13,4 @@
 |    9 | [Haskell](https://www.haskell.org/) (for now) |
 |   10 | [Go](https://go.dev/)                         |
 |   11 | [Elixir](https://elixir-lang.org/)            |
+|   12 | [Dart](https://dart.dev/)                     |
