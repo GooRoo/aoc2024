@@ -12,3 +12,4 @@
 |    8 | [Nim](https://nim-lang.org/)                  |
 |    9 | [Haskell](https://www.haskell.org/) (for now) |
 |   10 | [Go](https://go.dev/)                         |
+|   11 | [Elixir](https://elixir-lang.org/)            |
