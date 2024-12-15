@@ -76,26 +76,25 @@ solve_machine2(Ax, Ay, Bx, By, Px, Py, A, B) :-
 
     labeling([min(Tokens)], [A,B]).
 
-solve_machines_generic([], _, _, Total, Total).
-solve_machines_generic([Machine|Rest], CheckPossible, SolveMachine, Acc, Total) :-
+solve_machines_generic([], _, Total, Total).
+solve_machines_generic([Machine|Rest], SolveMachine, Acc, Total) :-
     machine(Ax, Ay, Bx, By, Px, Py) = Machine,
     (check_possible(SolveMachine, Ax, Ay, Bx, By, Px, Py) ->
         call(SolveMachine, Ax, Ay, Bx, By, Px, Py, A, B),
         Tokens is A * 3 + B,
-        format('Machine ~w solved: A = ~w, B = ~w, Tokens = ~w~n', [Machine, A, B, Tokens]),
+        % format('Machine ~w solved: A = ~w, B = ~w, Tokens = ~w~n', [Machine, A, B, Tokens]),
         NewAcc is Acc + Tokens
     ;
-        format('No solution for ~w~n', [Machine]),
+        % format('No solution for ~w~n', [Machine]),
         NewAcc is Acc
     ),
-    solve_machines_generic(Rest, CheckPossible, SolveMachine, NewAcc, Total).
-
+    solve_machines_generic(Rest, SolveMachine, NewAcc, Total).
 
 solve_machines(Machines, Acc, Total) :-
-	solve_machines_generic(Machines, check_possible, solve_machine, Acc, Total).
+	solve_machines_generic(Machines, solve_machine, Acc, Total).
 
 solve_machines2(Machines, Acc, Total) :-
-	solve_machines_generic(Machines, check_possible2, solve_machine2, Acc, Total).
+	solve_machines_generic(Machines, solve_machine2, Acc, Total).
 
 solve_first(Filename, Tokens) :-
 	read_input(Filename, Machines),
@@ -110,4 +109,4 @@ main :-
 	solve_second("data/task.data", Tokens2),
 	format('Results:~n    first: ~w~n    second: ~w~n', [Tokens1, Tokens2]).
 
-:- initialization(main).
+% :- initialization(main).
