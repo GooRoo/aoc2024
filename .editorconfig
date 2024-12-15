@@ -8,9 +8,12 @@ indent_style = tab
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.hs]
+[*.{hs,nim}]
 indent_size = 2
 indent_style = space
 
 [*.py]
 indent_style = space
+
+[*.{ex,exs}]
+indent_size = 2
