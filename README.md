@@ -14,3 +14,4 @@
 |   10 | [Go](https://go.dev/)                         |
 |   11 | [Elixir](https://elixir-lang.org/)            |
 |   12 | [Dart](https://dart.dev/)                     |
+|   13 | [SWI-Prolog](https://www.swi-prolog.org/)     |
