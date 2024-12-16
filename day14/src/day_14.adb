@@ -77,17 +77,16 @@ package body Day_14 is
             P_Comma : constant Natural := Index (P_Values, ",");
             V_Comma : constant Natural := Index (V_Values, ",");
 
-            New_Particle : Robot;
-
             Pos_X : constant Natural := Natural'Value (P_Values (1 .. P_Comma - 1));
             Pos_Y : constant Natural := Natural'Value (P_Values (P_Comma + 1 .. P_Values'Last));
             Vel_X : constant Integer := Integer'Value (V_Values (1 .. V_Comma - 1));
             Vel_Y : constant Integer := Integer'Value (V_Values (V_Comma + 1 .. V_Values'Last));
-         begin
-            New_Particle := Robot'(
+
+            New_Particle : constant Robot := Robot'(
                Pos => (X => X_Coordinate (Pos_X), Y => Y_Coordinate (Pos_Y)),
                Vel => (DX => X_Movement (Vel_X), DY => Y_Movement (Vel_Y))
             );
+         begin
             Robot_Vectors.Append (Result, New_Particle);
          exception
             when Constraint_Error =>
@@ -244,7 +243,7 @@ package body Day_14 is
             end loop;
 
             if Old_T < 0 then
-               Old_T := Old_T + M;
+               Old_T := @ + M;
             end if;
 
             return Natural (Old_T);
