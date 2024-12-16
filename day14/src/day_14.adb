@@ -44,9 +44,8 @@ package body Day_14 is
 
    procedure Move_By (Self : in out Robot; Steps : Positive := 1) is
    begin
-      for I in 1 .. Steps loop
-         Move (Self);
-      end loop;
+      Self.Pos.X := @ + X_Coordinate'Mod (Integer (Self.Vel.DX) * Steps);
+      Self.Pos.Y := @ + Y_Coordinate'Mod (Integer (Self.Vel.DY) * Steps);
    end Move_By;
 
    function Read_From_File (Filename : String) return Robots is
