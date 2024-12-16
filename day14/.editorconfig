@@ -1,0 +1,3 @@
+[*.{adb,ads}]
+indent_size = 3
+indent_style = space

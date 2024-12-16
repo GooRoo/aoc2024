@@ -1,0 +1,16 @@
+name = "day14"
+description = "Advent of Code 2024: Day 14"
+version = "0.1.0-dev"
+
+authors = ["Serhii Olendarenko"]
+maintainers = ["Serhii Olendarenko <sergey.olendarenko@gmail.com>"]
+maintainers-logins = ["GooRoo"]
+licenses = "BSD-3-Clause"
+website = ""
+tags = []
+
+executables = ["main"]
+
+[build-switches]
+development.ada_version = "ada2022"
+release.ada_version = "ada2022"
