@@ -154,7 +154,7 @@ package body Day_14 is
       Field : Matrix;
    begin
       Simulate (Data, 100);
-      Fill_Matrix (Data, Field);
+      --  Fill_Matrix (Data, Field);
       --  Print_Matrix (Field);
 
       declare
