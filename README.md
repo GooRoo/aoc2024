@@ -16,3 +16,4 @@
 |   12 | [Dart](https://dart.dev/)                     |
 |   13 | [SWI-Prolog](https://www.swi-prolog.org/)     |
 |   14 | [Ada](https://ada-lang.io/)                   |
+|   17 | [Crystal](https://crystal-lang.org/)          |

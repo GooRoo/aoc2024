@@ -1,0 +1,13 @@
+name: day17
+version: 0.1.0
+
+authors:
+  - GooRoo <sergey.olendarenko@gmail.com>
+
+targets:
+  day17:
+    main: src/main.cr
+
+crystal: '>= 1.14.0'
+
+license: BSD-3-Clause
