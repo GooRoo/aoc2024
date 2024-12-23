@@ -33,7 +33,7 @@ evolve2000(Secret, Result) :-
 	evolve_secret(Secret, 2000, Result).
 
 solve_first(Secrets, Result) :-
-	maplist(evolve2000, Secrets, Results),
+	concurrent_maplist(evolve2000, Secrets, Results),
 	foldl(plus, Results, 0, Result).
 
 solve_first_from_file(FileName, Result) :-
