@@ -17,7 +17,10 @@
 |   13 | [SWI-Prolog](https://www.swi-prolog.org/)     | ⭐⭐    |
 |   14 | [Ada](https://ada-lang.io/)                   | ⭐⭐    |
 |   15 | [Janet](https://janet-lang.org/)              | ⭐     |
+|    … |                                               |       |
 |   17 | [Crystal](https://crystal-lang.org/)          | ⭐     |
 |   18 | [Lua](https://www.lua.org/)                   | ⭐⭐    |
 |   19 | [PHP](https://www.php.net/)                   | ⭐     |
+|    … |                                               |       |
 |   22 | [SWI-Prolog](https://www.swi-prolog.org/)     | ⭐     |
+|    … |                                               |       |
